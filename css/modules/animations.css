@@ -1,0 +1,88 @@
+:root {
+  --glow-opacity: 0.86;
+  --face-color-base: #f5d77d;
+  --face-color-bright: #ffd98a;
+  --face-color-deep: #e5b65b;
+  --shadow-opacity-min: 0.4;
+  --shadow-opacity-max: 0.0;
+}
+
+@keyframes shadow-pulse {
+  0%   { opacity: var(--shadow-opacity-min); }
+  40%  { opacity: var(--shadow-opacity-max); }
+  60%  { opacity: var(--shadow-opacity-max); }
+  100% { opacity: var(--shadow-opacity-min); }
+}
+
+@keyframes face-glow {
+  0% {
+    fill: var(--face-color-base);
+  }
+
+  25% {
+    fill: var(--face-color-bright);
+  }
+
+  50% {
+    fill: var(--face-color-deep);
+  }
+
+  75% {
+    fill: var(--face-color-bright);
+  }
+
+  100% {
+    fill: var(--face-color-base);
+  }
+}
+
+@keyframes warm-breathe {
+  0% {
+    opacity: var(--glow-opacity, 0.86);
+    transform: scale(1);
+    filter: brightness(1.05) blur(0px);
+  }
+
+  25% {
+    opacity: calc(var(--glow-opacity, 0.86) + 0.08);
+    transform: scale(1.05);
+    filter: brightness(1.1) blur(4px);
+  }
+
+  50% {
+    opacity: calc(var(--glow-opacity, 0.86) + 0.12);
+    transform: scale(1.08);
+    filter: brightness(1.15) blur(6px);
+  }
+
+  75% {
+    opacity: calc(var(--glow-opacity, 0.86) + 0.08);
+    transform: scale(1.05);
+    filter: brightness(1.1) blur(4px);
+  }
+
+  100% {
+    opacity: var(--glow-opacity, 0.86);
+    transform: scale(1);
+    filter: brightness(1.05) blur(0px);
+  }
+}
+
+
+#jack-of-lantern__face {
+  animation: face-glow 6s ease-in-out infinite;
+  transition: fill 2s ease-in-out;
+}
+
+#jack-of-lantern__scene-shadow,
+#whitch-hat__scene-shadow {
+  animation: shadow-pulse 5s ease-in-out infinite;
+  transition: opacity 1.875s ease-in-out;
+  will-change: opacity;
+}
+
+.glow {
+  animation: warm-breathe 5s ease-in-out infinite;
+  transform-origin: center;
+  will-change: opacity, transform, filter;
+}

@@ -1,0 +1,39 @@
+:root {
+  --pumpkin-min-viewport: 500; /* menor viewport considerada */
+  --pumpkin-max-viewport: 1360; /* viewport de referência para escala */
+
+  --pumpkin-min-width: 157.7;
+  --pumpkin-max-width: 449.4;
+
+  --pumpkin-min-height: 144;
+  --pumpkin-max-height: 410.4;
+
+  --pumpkin-offset-x: 3vw;
+  --pumpkin-offset-y: 2dvh;
+}
+
+#jack-of-lantern {
+  position: fixed;
+
+  /* --- escala fluida --- */
+  width: calc(
+    var(--pumpkin-min-width) * 1px +
+      (var(--pumpkin-max-width) - var(--pumpkin-min-width)) *
+      (
+        (100vw - var(--pumpkin-min-viewport) * 1px) /
+          (var(--pumpkin-max-viewport) - var(--pumpkin-min-viewport))
+      )
+  );
+
+  height: calc(
+    var(--pumpkin-min-height) * 1px +
+      (var(--pumpkin-max-height) - var(--pumpkin-min-height)) *
+      (
+        (100vw - var(--pumpkin-min-viewport) * 1px) /
+          (var(--pumpkin-max-viewport) - var(--pumpkin-min-viewport))
+      )
+  );
+
+  left: var(--pumpkin-offset-x);
+  bottom: var(--pumpkin-offset-y);
+}

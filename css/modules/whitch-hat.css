@@ -1,0 +1,34 @@
+:root {
+  /* Chapéu de bruxa */
+  --hat-min-viewport: 500;      /* menor viewport considerada */
+  --hat-max-viewport: 1360;     /* viewport de referência */
+  
+  --hat-min-width: 265;         /* largura mínima em px */
+  --hat-max-width: 686.667;     /* largura máxima em px */
+  
+  --hat-min-height: 195;        /* altura mínima em px */
+  --hat-max-height: 509.2;      /* altura máxima em px */
+
+  --hat-offset-x: 3vw;          /* distância da direita */
+  --hat-offset-y: 2dvh;         /* distância do bottom */
+}
+
+#whitch-hat {
+  position: fixed;
+  right: var(--hat-offset-x);
+  bottom: var(--hat-offset-y);
+
+  width: calc(
+    var(--hat-min-width) * 1px +
+    (var(--hat-max-width) - var(--hat-min-width)) *
+    ((100vw - var(--hat-min-viewport) * 1px) /
+     (var(--hat-max-viewport) - var(--hat-min-viewport)))
+  );
+
+  height: calc(
+    var(--hat-min-height) * 1px +
+    (var(--hat-max-height) - var(--hat-min-height)) *
+    ((100vw - var(--hat-min-viewport) * 1px) /
+     (var(--hat-max-viewport) - var(--hat-min-viewport)))
+  );
+}
