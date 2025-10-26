@@ -11,7 +11,7 @@
   🌐 **Idiomas disponíveis**:  
   [🇺🇸 English](README.md) | [🇧🇷 Português](README.pt-BR.md)
 
-  <img src="./assets/readme/preview.gif" alt="Banner do Projeto">
+  <img src="./assets/readme/preview.gif" alt="Project Banner" width="70%">
 
   _Projeto frontend para o desafio de halloween da Dev To_
 
@@ -19,11 +19,11 @@
 
 ## 🗺️ Mapa
 
-  - [<code>🧩 Feito Com</code>](#🧩-feito-com)
-  - [<code>🕰️ Versionamento</code>](#🕰️-versionamento)
-  - [<code>🧙 Autores</code>](#🧙-autores)
-  - [<code>📜 Licença</code>](#📜-licenca)
-  - [<code>📢 Agradecimentos</code>](#📢-agradecimentos)
+  - [<code>🧩 Feito Com</code>](#-feito-com)
+  - [<code>🕰️ Versionamento</code>](#-versionamento)
+  - [<code>🧙 Autores</code>](#-autores)
+  - [<code>📜 Licença</code>](#-licenca)
+  - [<code>📢 Agradecimentos</code>](#-agradecimentos)
 
 ## 🧩 Feito Com
 
@@ -42,7 +42,7 @@ Usei [SemVer](http://semver.org/) para versionamento. Para as versões disponív
 
 ## 📜 Licença
 
-Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICENSE.txt) para detalhes
+Este projeto está licenciado sob a Licença MIT, veja o arquivo [LICENSE](LICENSE.txt) para detalhes
 
 ## 📢 Agradecimentos
 

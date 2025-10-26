@@ -11,7 +11,7 @@
   🌐 **Available languages**:  
 [🇺🇸 English](README.md) | [🇧🇷 Português](README.pt-BR.md)
   
-  <img src="./assets/readme/preview.gif" alt="Project Banner">
+  <img src="./assets/readme/preview.gif" alt="Project Banner" width="70%">
 
   _Frontend project for the Dev To Halloween challenge_
 
@@ -20,11 +20,11 @@
 <!--Parágrafo único de descrição do projeto vai aqui-->
 
 ## 🗺️ Map 
-- [<code>🧩 Built With</code>](#🧩-built-with)
-- [<code>🕰️ Versioning</code>](#🕰️-versioning)
-- [<code>🧙 Authors</code>](#🧙-authors)
-- [<code>📜 License</code>](#📜-license)
-- [<code>📢 Acknowledgments</code>](#📢-acknowledgments)
+- [<code>🧩 Built With</code>](#-built-with)
+- [<code>🕰️ Versioning</code>](#-versioning)
+- [<code>🧙 Authors</code>](#-authors)
+- [<code>📜 License</code>](#-license)
+- [<code>📢 Acknowledgments</code>](#-acknowledgments)
 
 
 ## 🧩 Built With
@@ -36,7 +36,7 @@
 
 ## 🕰️ Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/dev-sigo/my_spooky_cozy_haven/tags). 
+I use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/dev-sigo/my_spooky_cozy_haven/tags). 
 
 ## 🧙 Authors
 
@@ -44,7 +44,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## 📜 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE.txt) file for details
+This project is licensed under the MIT License, see the [LICENSE](LICENSE.txt) file for details
 
 ## 📢 Acknowledgments
 
