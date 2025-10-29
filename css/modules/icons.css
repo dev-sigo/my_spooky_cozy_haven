@@ -2,7 +2,7 @@
   overflow: hidden;
 }
 
-#hint > img {
+#hint > span > img{
   height: clamp(1.75rem, 2.5vw + 0.1rem ,7rem);
   margin-inline: 0.5rem;
 
