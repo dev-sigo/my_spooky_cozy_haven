@@ -19,7 +19,9 @@ function determineLanguage() {
  */
 async function loadTranslations(langToLoad) {
   try {
-    const response = await fetch(`../lang/${langToLoad}.json`);
+    const REPO_NAME = 'my_spooky_cozy_haven';
+    const translationPath = `/${REPO_NAME}/lang/${langToLoad}.json`;
+    const response = await fetch(translationPath);
     
     if (!response.ok) {
         throw new Error(`Falha ao carregar o arquivo de tradução: ${response.status}`);
