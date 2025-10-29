@@ -11,7 +11,7 @@
   🌐 **Available languages**:  
 [🇺🇸 English](README.md) | [🇧🇷 Português](README.pt-BR.md)
   
-  <img src="./assets/readme/preview.gif" alt="Project Banner" width="70%">
+  <img src="https://i.imgur.com/j8yoomP.gif" alt="Project Banner" width="70%">
 
   _Frontend project for the Dev To Halloween challenge_
 
