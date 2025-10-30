@@ -1,0 +1,43 @@
+:root {
+  /* ===============================================================
+     1. FLUID SCALING: Parâmetros e Pontos de Bloqueio (CSS Locks)
+     =============================================================== */
+  --vp-min: 320;   /* Viewport mínima (px) */
+  --vp-max: 1360;  /* Viewport máxima (px) */
+
+  --p-w-min: 157.7; /* Largura mínima (px) */
+  --p-w-max: 449.4; /* Largura máxima (px) */
+
+  --p-h-min: 144;   /* Altura mínima (px) */
+  --p-h-max: 410.4; /* Altura máxima (px) */
+
+  --p-offset-x: 3vw;  /* Deslocamento X */
+  --p-offset-y: 2dvh; /* Deslocamento Y */
+  
+  /* Variável para a FÓRMULA DE INTERPOLAÇÃO (Fator de Escala)
+     Esta variável calcula onde a Viewport atual se encaixa entre vp-min e vp-max. */
+  --fluid-scale-factor: 
+    ((100vw - var(--vp-min) * 1px) / (var(--vp-max) - var(--vp-min)));
+}
+
+#jack-of-lantern {
+  position: fixed;
+
+  /* --- DIMENSIONAMENTO FLUIDO --- */
+  
+  /* Largura: Mínimo + (Diferença * Fator) */
+  width: calc(
+    var(--p-w-min) * 1px +
+    (var(--p-w-max) - var(--p-w-min)) * var(--fluid-scale-factor)
+  );
+
+  /* Altura: Mínimo + (Diferença * Fator) */
+  height: calc(
+    var(--p-h-min) * 1px +
+    (var(--p-h-max) - var(--p-h-min)) * var(--fluid-scale-factor)
+  );
+
+  /* --- POSICIONAMENTO --- */
+  left: var(--p-offset-x);
+  bottom: var(--p-offset-y);
+}

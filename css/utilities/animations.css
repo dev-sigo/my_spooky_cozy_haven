@@ -1,0 +1,75 @@
+:root {
+  --glow-opacity: 1;
+
+  /* Cores da Face (Jack O'Lantern) */
+  --face-color-base: #f5d77d;
+  --face-color-bright: #ffd98a;
+  --face-color-deep: #e5b65b;
+  
+  /* Sombra */
+  --shadow-opacity-min: 0.5;
+  --shadow-opacity-max: 0.0;
+  
+  /* Define o tempo padrão para sincronização (KISS) */
+  --animation-cycle-time: 6s;
+  --animation-timing: ease-in-out; 
+}
+
+/* ===============================================================
+   KEYFRAMES E COERÊNCIA
+   =============================================================== */
+
+@keyframes shadow-pulse {
+  /* Sombra MÍNIMA (coincide com Luz Forte). */
+  0%, 100% { opacity: var(--shadow-opacity-max); }
+  
+  /* Sombra MÁXIMA (coincide com Luz Fraca). */
+  40%, 60%  { opacity: var(--shadow-opacity-min); }
+}
+
+@keyframes face-glow {
+  /* Agrupando estados de cores iguais */
+  0%, 100% { fill: var(--face-color-base); }
+  25%, 75% { fill: var(--face-color-bright); }
+  50%      { fill: var(--face-color-deep); }
+}
+
+@keyframes glow-breathe {
+  /* Luz MÁXIMA (Coincide com sombra mínima) */
+  0%, 100% {
+    opacity: var(--glow-opacity);
+    box-shadow: inset 0 0 var(--glow-shadow-blur) var(--glow-shadow-spread) var(--glow-shadow-color);
+  }
+
+  /* Luz MÍNIMA (Coincide com sombra máxima) */
+  50% {
+    opacity: calc(var(--glow-opacity) - 0.2); 
+    box-shadow: 
+      inset 0 0 
+      calc(var(--glow-shadow-blur) - 80px) 
+      calc(var(--glow-shadow-spread) / 3) 
+      var(--glow-shadow-color);
+  }
+}
+
+/* ===============================================================
+   APLICAÇÃO DOS ESTILOS
+   =============================================================== */
+
+#jack-of-lantern__face {
+  animation: face-glow var(--animation-cycle-time) var(--animation-timing) infinite;
+  transition: fill 2s var(--animation-timing); 
+}
+
+#jack-of-lantern__scene-shadow {
+  opacity: 0.3;
+}
+
+#whitch-hat__scene-shadow {
+  animation: shadow-pulse var(--animation-cycle-time) var(--animation-timing) infinite; 
+}
+
+.glow {
+  animation: glow-breathe var(--animation-cycle-time) var(--animation-timing) infinite;
+  transform-origin: center;
+}

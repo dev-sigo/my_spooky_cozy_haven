@@ -1,23 +1,37 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/main.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="./css/base/base.css">
+    <link rel="stylesheet" href="./css/base/typography.css">
+
+    <link rel="stylesheet" href="./css/pages/stage.css">
+
+    <link rel="stylesheet" href="./css/elements/icons.css">
+
+    <link rel="stylesheet" href="./css/components/_title.css"> 
+    <link rel="stylesheet" href="./css/components/_hint.css">
+    <link rel="stylesheet" href="./css/components/jack_of_lantern.css">
+    <link rel="stylesheet" href="./css/components/whitch-hat.css">
+
+    <link rel="stylesheet" href="./css/utilities/glow.css">
+    <link rel="stylesheet" href="./css/utilities/animations.css">
+    
     <title>🎃 My Spooky Cozy Haven | Dev To</title>
-  </head>
+</head>
   <body>
-    <h1 id="title"></h1>
+    <h1 class="fixed-text-container header-title"></h1>
 
     <audio id="music" src="./assets/sfx/music.mp3" loop></audio>
     <audio class="sfx" src="./assets/sfx/rain.mp3" loop></audio>
     <audio class="sfx" src="./assets/sfx/candle.mp3" loop></audio>
     <audio class="sfx" src="./assets/sfx/cauldron.mp3" loop></audio>
 
-    <div id="table">
+    <div class="table">
       <svg id="jack-of-lantern" class="jack-of-lantern__light-glow" width="449" height="410" viewBox="0 0 449 410" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path id="jack-of-lantern__fill" d="M280.173 62.3536C241.609 45.4604 220.291 44.7507 182.941 62.3536C137.249 56.3449 120.063 60.9198 105.235 84.0483C61.4653 99.059 46.5253 112.714 27.5279 141.244C-5.2301 208.777 -2.45685 241.037 15.6944 295.079C32.4347 330.918 44.6634 349.233 93.0066 365.291C113.742 377.743 125.257 382.159 145.469 382.253C158.491 398.135 172.236 399.193 201.678 395.072C232.248 407.893 248.388 407.148 275.834 395.072C302.604 400.145 332.044 389.747 363.797 361.741C363.797 361.741 399.493 348.725 426.12 301.391C446.755 264.707 455.507 208.892 430.065 156.036C404.623 103.179 353.541 87.7956 353.541 87.7956C332.381 64.1337 315.618 57.4959 280.173 62.3536Z" fill="#F29100"/>
         <g id="jack-of-lantern__shadow" fill="#D56400">
@@ -89,7 +103,7 @@
       </svg>
     </div>
 
-    <p id="hint"></p>
+    <p class="fixed-text-container footer-hint"></p>
 
     <script src="./script.js" type="module"></script>
   </body>

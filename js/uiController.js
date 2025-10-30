@@ -67,7 +67,7 @@ function buildDesktopHint(hintElement, translations, musicKeyHtml) {
  * @param {string} toggleIconHtml - O HTML do ícone do clique duplo/toque duplo.
  */
 export function setDynamicHint(translations, musicKeyHtml, toggleIconHtml) {
-    const hintElement = document.getElementById('hint');
+    const hintElement = document.querySelector('.footer-hint');
     
     if (!hintElement) {
         console.warn('Elemento #hint não encontrado.');

@@ -1,0 +1,63 @@
+/* ===============================================================
+   1. Estilo do Contêiner Principal (Palco)
+   =============================================================== */
+
+body {
+  /* LAYOUT */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100dvh;
+  overflow: hidden;
+
+  /* FUNDO */
+  background: 
+    url("../../assets/img/wall.jpg") 
+    center / contain /* Background-size e Position */
+    repeat;
+}
+
+/* ===============================================================
+   2. Elementos de Layout Fixo (O Balcão/Mesa)
+   =============================================================== */
+
+.table {
+  /* POSICIONAMENTO */
+  position: fixed;
+  bottom: 0;
+  left: 0;
+
+  /* DIMENSÃO */
+  width: 100vw;
+  height: 13dvh;
+
+  /* FUNDO E BORDA */
+  background: 
+    url("../../assets/img/table.jpg") 
+    center / 15%;
+  border-top: 3px solid #241810;
+}
+
+/* ===============================================================
+   3. Elementos de Texto Fixo (Título e Hint)
+   =============================================================== */
+
+.fixed-text-container {
+  /* POSICIONAMENTO BASE */
+  position: fixed;
+  width: 100%; /* Simplificação de 100vw para 100% no fixed */
+  z-index: 1;
+}
+
+/* -- MODIFICADORES -- */
+
+.header-title {
+  /* Título fixo no topo */
+  top: 1rem;
+}
+
+.footer-hint {
+  /* Hint fixo no rodapé */
+  bottom: 0;
+  width: fit-content;
+}

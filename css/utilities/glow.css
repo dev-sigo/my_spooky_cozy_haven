@@ -1,0 +1,61 @@
+:root {
+  /* ===============================================================
+     1. CORES E EFEITOS
+     =============================================================== */
+  --glow-color-center: rgba(255, 220, 130, 0.81);
+  --glow-color-mid: rgba(255, 190, 80, 0.36);
+  --glow-color-edge: rgba(80, 40, 0, 0.18);
+  
+  /* Sombra: Usando a cor base do edge, mas com opacidade diferente para DRY */
+  --glow-shadow-base: 80, 40, 0;
+  --glow-shadow-color: rgba(var(--glow-shadow-base), 0.2);
+
+  --glow-opacity: 0.86;
+  --glow-shadow-blur: 200px;
+  --glow-shadow-spread: 80px;
+
+  /* ===============================================================
+     2. DIMENSÃO E POSICIONAMENTO
+     =============================================================== */
+  --glow-bg-size: 200%;
+
+  /* Fallback de Posição (Substituído pelo JS) */
+  --lantern-x: 50vw;
+  --lantern-y: 50vh;
+
+  /* FLUID SCALING */
+  --glow-stop-mid: clamp(4em, 20vw, 15em); 
+  --glow-stop-edge: clamp(12em, 60vw, 40em); 
+}
+
+.glow {
+  /* --- 1. LAYOUT & DIMENSÃO --- */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100dvh;
+
+  /* --- 2. COMPORTAMENTO --- */
+  pointer-events: none;
+  z-index: 1; 
+  opacity: var(--glow-opacity);
+
+  /* --- 3. ESTILO VISUAL --- */
+  background: 
+    /* Base do gradiente, usando unidades de distância para Fluid Scaling */
+    radial-gradient(
+      circle at 50% 50%,
+      var(--glow-color-center) 0px,
+      var(--glow-color-mid) var(--glow-stop-mid), 
+      var(--glow-color-edge) var(--glow-stop-edge)
+    ) 
+    /* Posição e Tamanho */
+    calc(var(--lantern-x) - 50vw) calc(var(--lantern-y) - 50vh) / var(--glow-bg-size) var(--glow-bg-size) 
+    /* Repetição */
+    no-repeat;
+
+  /* Sombra interna para o efeito de profundidade */
+  box-shadow: 
+    inset 0 0 var(--glow-shadow-blur) var(--glow-shadow-spread) var(--glow-shadow-color);
+}
