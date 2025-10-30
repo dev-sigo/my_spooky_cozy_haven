@@ -5,8 +5,8 @@
   --vp-min: 320;   /* Viewport mínima (px) */
   --vp-max: 1360;  /* Viewport máxima (px) */
 
-  --h-w-min: 265;         /* Largura mínima (px) */
-  --h-w-max: 686.667;     /* Largura máxima (px) */
+  --h-w-min: 180;         /* Largura mínima (px) */
+  --h-w-max: 686;     /* Largura máxima (px) */
   
   --h-h-min: 195;         /* Altura mínima (px) */
   --h-h-max: 509.2;       /* Altura máxima (px) */
