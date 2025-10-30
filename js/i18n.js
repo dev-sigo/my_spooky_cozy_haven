@@ -20,7 +20,7 @@ function determineLanguage() {
 async function loadTranslations(langToLoad) {
   try {
     const REPO_NAME = 'my_spooky_cozy_haven';
-    const translationPath = `/${REPO_NAME}/lang/${langToLoad}.json`;
+    const translationPath = `lang/${langToLoad}.json`;
     const response = await fetch(translationPath);
     
     if (!response.ok) {
@@ -52,7 +52,7 @@ export default async function initI18n() {
   const langToLoad = determineLanguage();
   const translations = await loadTranslations(langToLoad);
 
-  const titleElement = document.getElementById("title");
+  const titleElement = document.querySelector('.header-title');
 
   if (titleElement && translations.title) {
     titleElement.textContent = translations.title;
