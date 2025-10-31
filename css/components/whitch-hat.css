@@ -12,7 +12,7 @@
   --h-h-max: 509.2;       /* Altura máxima (px) */
 
   --h-offset-x: 3vw;      /* Deslocamento X (da direita) */
-  --h-offset-y: 2dvh;     /* Deslocamento Y (do bottom) */
+  --h-offset-y: 6dvh;     /* Deslocamento Y (do bottom) */
   
   /* Variável para a FÓRMULA DE INTERPOLAÇÃO (Fator de Escala)
      Calcula a posição da Viewport atual entre o limite min e max. */

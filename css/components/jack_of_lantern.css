@@ -12,7 +12,7 @@
   --p-h-max: 410.4; /* Altura máxima (px) */
 
   --p-offset-x: 3vw;  /* Deslocamento X */
-  --p-offset-y: 2dvh; /* Deslocamento Y */
+  --p-offset-y: 6dvh; /* Deslocamento Y */
   
   /* Variável para a FÓRMULA DE INTERPOLAÇÃO (Fator de Escala)
      Esta variável calcula onde a Viewport atual se encaixa entre vp-min e vp-max. */
