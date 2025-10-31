@@ -2,25 +2,30 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+
+    <style>
+      *,*::before,*::after{box-sizing:border-box}html,body{height:100%;margin:0;padding:0}body{font-family:Lexend,sans-serif;color:#f5f5f5}.align-center{text-align:center}body{display:flex;justify-content:center;align-items:center;min-height:100dvh;overflow:hidden;background:url("../../assets/img/wall.jpg") center / contain repeat}.table{position:fixed;bottom:0;left:0;width:100vw;height:13dvh;background:url("../../assets/img/table.jpg") center / 15%;border-top:3px solid #241810}.fixed-text-container{position:fixed;width:100%;z-index:1}.header-title{top:1rem}.footer-hint{bottom:0;width:fit-content}.footer-hint{padding-top:1rem;padding-bottom:.75rem;font-weight:200;padding-inline:clamp(1rem,5vw,4rem);font-size:clamp(0.8rem,2.5vw+0.1rem,3rem);background-color:rgba(0,0,0,0.5);box-shadow:0 0 30px 10px rgba(0,0,0,0.7)}.header-title{padding-bottom:2rem;font-weight:200;font-size:clamp(1rem,2.5vw+0.5rem,7rem);background-color:rgba(0,0,0,0.8);box-shadow:0 0 50px 40px rgba(0,0,0,0.8)}
+    </style> 
     
-    <link rel="stylesheet" href="./css/base/base.css">
-    <link rel="stylesheet" href="./css/base/typography.css">
+    <link rel="preload" href="./css/elements/icons.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="./css/elements/icons.css"></noscript>
 
-    <link rel="stylesheet" href="./css/pages/stage.css">
+    <link rel="preload" href="./css/components/jack_of_lantern.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="./css/components/jack_of_lantern.css"></noscript>
 
-    <link rel="stylesheet" href="./css/elements/icons.css">
+    <link rel="preload" href="./css/components/whitch-hat.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="./css/components/whitch-hat.css"></noscript>
 
-    <link rel="stylesheet" href="./css/components/title.css"> 
-    <link rel="stylesheet" href="./css/components/hint.css">
-    <link rel="stylesheet" href="./css/components/jack_of_lantern.css">
-    <link rel="stylesheet" href="./css/components/whitch-hat.css">
+    <link rel="preload" href="./css/utilities/glow.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="./css/utilities/glow.css"></noscript>
 
-    <link rel="stylesheet" href="./css/utilities/glow.css">
-    <link rel="stylesheet" href="./css/utilities/animations.css">
-    
+    <link rel="preload" href="./css/utilities/animations.css" as="style"  onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="./css/utilities/animations.css"></noscript>
+
     <title>🎃 My Spooky Cozy Haven | Dev To</title>
 </head>
   <body>
@@ -104,7 +109,6 @@
     </div>
 
     <p class="fixed-text-container footer-hint"></p>
-
     <script src="./script.js" type="module"></script>
   </body>
 </html>
