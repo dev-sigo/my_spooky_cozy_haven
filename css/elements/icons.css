@@ -22,7 +22,7 @@
 /* Aplica o estilo a todas as imagens dentro do span do hint */
 .footer-hint > span > img {
   /* FLUID SCALING */
-  height: clamp(1.75rem, 2.5vw + 0.1rem ,7rem);
+  height: clamp(1.5rem, 2vw + 0.1rem ,7rem);
   margin-inline: var(--spacing-s);
 
   /* Efeito de cor (drop-shadow) e posicionamento */
