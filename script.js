@@ -1,6 +1,6 @@
 import initI18n from './js/i18n.js';
 import initMusicController from './js/musicController.js';
-import { setDynamicHint } from './js/uiController.js'; 
+import { setDynamicHint, getInlineSVG } from './js/uiController.js'; 
 import { initGlowTracking } from './js/glowTracker.js';
 
 document.addEventListener('DOMContentLoaded', async () => {
@@ -14,8 +14,8 @@ document.addEventListener('DOMContentLoaded', async () => {
         return;
     }
     
-    const MUSIC_KEY_HTML = '<img src="./assets/icons/p-key.svg" alt="Tecla P" class="hint-key-icon">'; 
-    const TOGGLE_ICON_HTML = '<img src="./assets/icons/touch.svg" alt="Ícone de clique duplo" class="hint-touch-icon">'; 
+    const MUSIC_KEY_HTML = await getInlineSVG('./assets/icons/p-key.svg', 'Tecla P', 'hint-key-icon');
+    const TOGGLE_ICON_HTML = await getInlineSVG('./assets/icons/touch.svg', 'Ícone de clique duplo', 'hint-touch-icon');
     
     setDynamicHint(translations, MUSIC_KEY_HTML, TOGGLE_ICON_HTML); 
     
